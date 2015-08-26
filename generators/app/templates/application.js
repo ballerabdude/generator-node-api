@@ -7,7 +7,7 @@ exports.app = {
 };
 
 exports.environment = {
-  name: 'development',
-  port: 8080,
-  secretKey: ''
+  development: {
+    secretKey: 'secretKey'
+  }
 };

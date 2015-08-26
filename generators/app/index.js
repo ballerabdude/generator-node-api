@@ -24,6 +24,7 @@ module.exports = generators.Base.extend({
 
     this.fs.copyTpl(sourceRoot + '/db.js', destRoot + '/config/db.js', templateContext);
     this.fs.copyTpl(sourceRoot + '/application.js', destRoot + '/config/application.js', templateContext);
+    this.fs.copyTpl(sourceRoot + '/_app.js', destRoot + '/app.js', templateContext);
     this.fs.copyTpl(sourceRoot + '/Gulpfile.js', destRoot + '/Gulpfile.js', templateContext);
     this.fs.copyTpl(sourceRoot + '/package.json', destRoot + '/package.json', templateContext);
     this.fs.copy(sourceRoot + '/.editorconfig', destRoot + '/.editorconfig');
@@ -95,5 +96,15 @@ module.exports = generators.Base.extend({
   install: function () {
     this.npmInstall();
   },
+
+  end: function () {
+    var self = this;
+    self.spawnCommand('git', ['init']).on('close', function () {
+      self.spawnCommand('git', ['add', '--all']).on('close', function () {
+        self.spawnCommand('git', ['commit', '-m', '"initial commit from generator"']);
+      });
+    });
+
+  }
 
 });
