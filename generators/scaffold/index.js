@@ -20,11 +20,10 @@ module.exports = generators.Base.extend({
 
 
     this.fs.copyTpl(sourceRoot + '/_controller.js', destRoot + '/controllers/'+ templateContext.scaffoldName.lower +'Controller.js', templateContext);
-    console.log(this.skipModel);
     if (!this.skipModel) {
       this.fs.copyTpl(sourceRoot + '/_model.js', destRoot + '/models/'+ templateContext.scaffoldName.lower +'Model.js', templateContext);
     }
-    this.fs.copyTpl(sourceRoot + '/_route.js', destRoot + '/routes/'+ templateContext.scaffoldName.lower +'Route.js', templateContext);
+    this.fs.copyTpl(sourceRoot + '/_route.js', destRoot + '/routes/'+ templateContext.scaffoldName.lower +'Routes.js', templateContext);
 
   },
 
