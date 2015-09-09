@@ -39,6 +39,50 @@ Finally, initiate the generator:
 yo node-api
 ```
 
+### Things you can do with node-api
+
+```bash
+yo node-api
+```
+<small>Creates a basic node app</small>
+root/
+├── config
+|   ├──db.js
+|   ├──application.js
+├── app.js
+├── node_modules/
+├── .editorconfig
+├── .jshintrc
+├── .yo-rc.json
+├── Gulpfile.js
+├── package.json
+├── README.md
+
+```bash
+yo node-api:scaffold NAME
+```
+###Run ```yo node-api``` before you run the scaffold. 
+Will scaffold an application for you just like rails ;-]
+root/
+├── config
+|   ├──db.js
+|   ├──application.js
+├── controllers
+|   ├──nameController.js
+├── models
+|   ├──nameModel.js
+├── routers
+|   ├──nameroutes.js
+├── app.js
+├── node_modules/
+├── .editorconfig
+├── .jshintrc
+├── .yo-rc.json
+├── Gulpfile.js
+├── package.json
+├── README.md
+
+
 ### Getting To Know Yeoman
 
 Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
