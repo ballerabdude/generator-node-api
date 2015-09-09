@@ -45,6 +45,7 @@ yo node-api
 yo node-api
 ```
 <small>Creates a basic node app</small>
+```
 root/
 ├── config
 |   ├──db.js
@@ -57,30 +58,23 @@ root/
 ├── Gulpfile.js
 ├── package.json
 ├── README.md
+```
 
 ```bash
 yo node-api:scaffold NAME
 ```
-###Run ```yo node-api``` before you run the scaffold. 
-Will scaffold an application for you just like rails ;-]
+###Run ```yo node-api``` before you run the scaffold.
+Will scaffold an application for you just like rails and add the files to your project ;-]
+```
 root/
-├── config
-|   ├──db.js
-|   ├──application.js
 ├── controllers
 |   ├──nameController.js
 ├── models
 |   ├──nameModel.js
 ├── routers
 |   ├──nameroutes.js
-├── app.js
-├── node_modules/
-├── .editorconfig
-├── .jshintrc
-├── .yo-rc.json
-├── Gulpfile.js
-├── package.json
-├── README.md
+
+```
 
 
 ### Getting To Know Yeoman
