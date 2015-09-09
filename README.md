@@ -39,7 +39,8 @@ Finally, initiate the generator:
 yo node-api
 ```
 
-### Things you can do with node-api
+# Things you can do with node-api
+## App skeleton
 
 ```bash
 yo node-api
@@ -59,9 +60,13 @@ root/
 ├── package.json
 ├── README.md
 ```
+## Scaffolding Controllers, Routes, and Models
 
 ```bash
 yo node-api:scaffold NAME
+```
+```bash
+yo node-api:scaffold NAME --skip-model
 ```
 ###Run ```yo node-api``` before you run the scaffold.
 Will scaffold an application for you just like rails and add the files to your project ;-]
