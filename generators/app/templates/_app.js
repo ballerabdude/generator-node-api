@@ -1,6 +1,9 @@
 'use strict';
 
 let Hapi = require('hapi'),
+    Inert = require('inert'),
+    Vision = require('vision'),
+    HapiSwagger = require('hapi-swagger'),
     Joi = require('joi'),
     fs = require('fs'),
     config = require('./config/application');
@@ -15,10 +18,14 @@ server.app.serect = config.environment.secretKey;
 
 server.connection({port: config.app.port, host: 'localhost', routes: {cors: true}});
 
-server.register({
-  register: require('hapi-swagger'),
-  options: {}
-  }, function (err) {
+server.register([
+  Inert,
+  Vision,
+  {
+      register: HapiSwagger,
+      options: {}
+  },
+  ], function (err) {
     if (err) {
         server.log(['error'], 'hapi-swagger load error: ' + err);
     }else{
