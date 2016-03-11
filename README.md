@@ -68,6 +68,9 @@ yo node-api:scaffold NAME
 ```bash
 yo node-api:scaffold NAME --skip-model
 ```
+```bash
+yo node-api:scaffold NAME --only-controller
+```
 ###Run ```yo node-api``` before you run the scaffold.
 Will scaffold an application for you just like rails and add the files to your project ;-]
 ```
