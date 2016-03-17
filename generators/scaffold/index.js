@@ -24,6 +24,7 @@ module.exports = generators.Base.extend({
       this.fs.copyTpl(sourceRoot + '/_controller.js', destRoot + '/controllers/'+ templateContext.scaffoldName.lower +'Controller.js', templateContext);
     } else {
 
+      this.fs.copyTpl(sourceRoot + '/_controller.js', destRoot + '/controllers/'+ templateContext.scaffoldName.lower +'Controller.js', templateContext);
       if (!this.skipModel) {
         this.fs.copyTpl(sourceRoot + '/_model.js', destRoot + '/models/'+ templateContext.scaffoldName.lower +'Model.js', templateContext);
       }
